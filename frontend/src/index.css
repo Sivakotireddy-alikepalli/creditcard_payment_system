@@ -1,0 +1,37 @@
+@import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+
+* {
+  font-family: 'Inter', sans-serif;
+  box-sizing: border-box;
+}
+
+/* Light mode (default) */
+:root {
+  --bg: #f3f4f6;
+  --surface: #ffffff;
+  --text: #111827;
+  --text-muted: #6b7280;
+  --border: #e5e7eb;
+  --primary: #6366f1;
+  --primary-hover: #4f46e5;
+}
+
+/* Dark mode */
+[data-theme="dark"] {
+  --bg: #0f0f1a;
+  --surface: #1e1e2e;
+  --text: #e2e8f0;
+  --text-muted: #94a3b8;
+  --border: #2d2d3f;
+  --primary: #818cf8;
+  --primary-hover: #6366f1;
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  min-height: 100vh;
+  transition: background 0.3s, color 0.3s;
+  margin: 0;
+}

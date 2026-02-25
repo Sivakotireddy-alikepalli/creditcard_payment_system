@@ -1,0 +1,74 @@
+version: '3.8'
+
+services:
+  mysql:
+    image: mysql:8.0
+    container_name: creditcard_mysql
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: root123
+      MYSQL_DATABASE: creditcard_db
+      MYSQL_USER: ccuser
+      MYSQL_PASSWORD: ccpass123
+    ports:
+      - "3308:3306"
+    volumes:
+      - mysql_data:/var/lib/mysql
+    healthcheck:
+      test: [ "CMD", "mysqladmin", "ping", "-h", "localhost", "-u", "root", "-proot123" ]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  django:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    container_name: creditcard_django
+    restart: always
+    environment:
+      MYSQL_DATABASE: creditcard_db
+      MYSQL_USER: ccuser
+      MYSQL_PASSWORD: ccpass123
+      MYSQL_HOST: mysql
+      MYSQL_PORT: 3306
+      JWT_SECRET_KEY: django-insecure-creditcard-payment-system-secret-key-change-in-production
+      DJANGO_API_URL: http://django:8000
+    ports:
+      - "8000:8000"
+    depends_on:
+      mysql:
+        condition: service_healthy
+    command: >
+      sh -c "python manage.py migrate &&
+             python manage.py create_admin &&
+             gunicorn backend.wsgi:application --bind 0.0.0.0:8000 --workers 3"
+
+  fastapi:
+    build:
+      context: ./payment_service
+      dockerfile: Dockerfile
+    container_name: creditcard_fastapi
+    restart: always
+    environment:
+      JWT_SECRET_KEY: django-insecure-creditcard-payment-system-secret-key-change-in-production
+      DJANGO_API_URL: http://django:8000
+    ports:
+      - "8001:8001"
+    depends_on:
+      - django
+
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    container_name: creditcard_frontend
+    restart: always
+    ports:
+      - "3000:80"
+    depends_on:
+      - django
+      - fastapi
+
+volumes:
+  mysql_data:
