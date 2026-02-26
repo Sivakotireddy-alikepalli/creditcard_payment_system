@@ -24,9 +24,9 @@
                             }
                         },
                         "url": {
-                            "raw": "{{baseUrl}}/api/auth/register/",
+                            "raw": "http://localhost:8000/api/auth/register/",
                             "host": [
-                                "{{baseUrl}}"
+                                "http://localhost:8000"
                             ],
                             "path": [
                                 "api",
@@ -68,9 +68,9 @@
                             }
                         },
                         "url": {
-                            "raw": "{{baseUrl}}/api/auth/login/",
+                            "raw": "http://localhost:8000/api/auth/login/",
                             "host": [
-                                "{{baseUrl}}"
+                                "http://localhost:8000"
                             ],
                             "path": [
                                 "api",
@@ -97,9 +97,9 @@
                             }
                         },
                         "url": {
-                            "raw": "{{baseUrl}}/api/auth/token/refresh/",
+                            "raw": "http://localhost:8000/api/auth/token/refresh/",
                             "host": [
-                                "{{baseUrl}}"
+                                "http://localhost:8000"
                             ],
                             "path": [
                                 "api",
@@ -128,9 +128,9 @@
                         "method": "GET",
                         "header": [],
                         "url": {
-                            "raw": "{{baseUrl}}/api/auth/profile/",
+                            "raw": "http://localhost:8000/api/auth/profile/",
                             "host": [
-                                "{{baseUrl}}"
+                                "http://localhost:8000"
                             ],
                             "path": [
                                 "api",
@@ -167,9 +167,9 @@
                             }
                         },
                         "url": {
-                            "raw": "{{baseUrl}}/api/auth/logout/",
+                            "raw": "http://localhost:8000/api/auth/logout/",
                             "host": [
-                                "{{baseUrl}}"
+                                "http://localhost:8000"
                             ],
                             "path": [
                                 "api",
@@ -202,9 +202,9 @@
                         "method": "GET",
                         "header": [],
                         "url": {
-                            "raw": "{{baseUrl}}/api/cards/",
+                            "raw": "http://localhost:8000/api/cards/",
                             "host": [
-                                "{{baseUrl}}"
+                                "http://localhost:8000"
                             ],
                             "path": [
                                 "api",
@@ -240,9 +240,9 @@
                             }
                         },
                         "url": {
-                            "raw": "{{baseUrl}}/api/cards/",
+                            "raw": "http://localhost:8000/api/cards/",
                             "host": [
-                                "{{baseUrl}}"
+                                "http://localhost:8000"
                             ],
                             "path": [
                                 "api",
@@ -269,9 +269,9 @@
                         "method": "POST",
                         "header": [],
                         "url": {
-                            "raw": "{{baseUrl}}/api/cards/1/set-default/",
+                            "raw": "http://localhost:8000/api/cards/1/set-default/",
                             "host": [
-                                "{{baseUrl}}"
+                                "http://localhost:8000"
                             ],
                             "path": [
                                 "api",
@@ -300,9 +300,9 @@
                         "method": "DELETE",
                         "header": [],
                         "url": {
-                            "raw": "{{baseUrl}}/api/cards/1/",
+                            "raw": "http://localhost:8000/api/cards/1/",
                             "host": [
-                                "{{baseUrl}}"
+                                "http://localhost:8000"
                             ],
                             "path": [
                                 "api",
@@ -335,9 +335,9 @@
                         "method": "GET",
                         "header": [],
                         "url": {
-                            "raw": "{{baseUrl}}/api/transactions/?status=SUCCESS&ordering=-created_at",
+                            "raw": "http://localhost:8000/api/transactions/?status=SUCCESS&ordering=-created_at",
                             "host": [
-                                "{{baseUrl}}"
+                                "http://localhost:8000"
                             ],
                             "path": [
                                 "api",
@@ -383,9 +383,9 @@
                             }
                         },
                         "url": {
-                            "raw": "{{baseUrl}}/api/transactions/create/",
+                            "raw": "http://localhost:8000/api/transactions/create/",
                             "host": [
-                                "{{baseUrl}}"
+                                "http://localhost:8000"
                             ],
                             "path": [
                                 "api",
@@ -408,9 +408,9 @@
                         "method": "GET",
                         "header": [],
                         "url": {
-                            "raw": "{{paymentServiceUrl}}/health",
+                            "raw": "http://localhost:8001/health",
                             "host": [
-                                "{{paymentServiceUrl}}"
+                                "http://localhost:8001"
                             ],
                             "path": [
                                 "health"
@@ -444,9 +444,9 @@
                             }
                         },
                         "url": {
-                            "raw": "{{paymentServiceUrl}}/payments/process",
+                            "raw": "http://localhost:8001/payments/process",
                             "host": [
-                                "{{paymentServiceUrl}}"
+                                "http://localhost:8001"
                             ],
                             "path": [
                                 "payments",
@@ -477,9 +477,9 @@
                         "method": "GET",
                         "header": [],
                         "url": {
-                            "raw": "{{baseUrl}}/api/admin-panel/users/",
+                            "raw": "http://localhost:8000/api/admin-panel/users/",
                             "host": [
-                                "{{baseUrl}}"
+                                "http://localhost:8000"
                             ],
                             "path": [
                                 "api",
@@ -516,9 +516,9 @@
                             }
                         },
                         "url": {
-                            "raw": "{{baseUrl}}/api/admin-panel/users/1/",
+                            "raw": "http://localhost:8000/api/admin-panel/users/1/",
                             "host": [
-                                "{{baseUrl}}"
+                                "http://localhost:8000"
                             ],
                             "path": [
                                 "api",
@@ -547,9 +547,9 @@
                         "method": "GET",
                         "header": [],
                         "url": {
-                            "raw": "{{baseUrl}}/api/admin-panel/cards/",
+                            "raw": "http://localhost:8000/api/admin-panel/cards/",
                             "host": [
-                                "{{baseUrl}}"
+                                "http://localhost:8000"
                             ],
                             "path": [
                                 "api",
@@ -577,9 +577,9 @@
                         "method": "GET",
                         "header": [],
                         "url": {
-                            "raw": "{{baseUrl}}/api/admin-panel/transactions/",
+                            "raw": "http://localhost:8000/api/admin-panel/transactions/",
                             "host": [
-                                "{{baseUrl}}"
+                                "http://localhost:8000"
                             ],
                             "path": [
                                 "api",
@@ -607,9 +607,9 @@
                         "method": "GET",
                         "header": [],
                         "url": {
-                            "raw": "{{baseUrl}}/api/admin-panel/summary/daily/",
+                            "raw": "http://localhost:8000/api/admin-panel/summary/daily/",
                             "host": [
-                                "{{baseUrl}}"
+                                "http://localhost:8000"
                             ],
                             "path": [
                                 "api",
@@ -638,9 +638,9 @@
                         "method": "GET",
                         "header": [],
                         "url": {
-                            "raw": "{{baseUrl}}/api/admin-panel/logs/",
+                            "raw": "http://localhost:8000/api/admin-panel/logs/",
                             "host": [
-                                "{{baseUrl}}"
+                                "http://localhost:8000"
                             ],
                             "path": [
                                 "api",
@@ -668,9 +668,9 @@
                         "method": "GET",
                         "header": [],
                         "url": {
-                            "raw": "{{baseUrl}}/api/admin-panel/transactions/export/csv/",
+                            "raw": "http://localhost:8000/api/admin-panel/transactions/export/csv/",
                             "host": [
-                                "{{baseUrl}}"
+                                "http://localhost:8000"
                             ],
                             "path": [
                                 "api",
@@ -688,14 +688,6 @@
         }
     ],
     "variable": [
-        {
-            "key": "baseUrl",
-            "value": "http://localhost:8000"
-        },
-        {
-            "key": "paymentServiceUrl",
-            "value": "http://localhost:8001"
-        },
         {
             "key": "accessToken",
             "value": ""
